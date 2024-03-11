@@ -1,0 +1,21 @@
+package com.question.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.question.entities.Question;
+import com.question.services.QuestionServices;
+
+@RestController
+@RequestMapping("/question")
+public class QuestionController {
+
+	@Autowired
+	private QuestionServices questionServices;
+	
+	public Question create(@RequestBody Question question) {
+		return questionServices.create(question);
+	}
+}
