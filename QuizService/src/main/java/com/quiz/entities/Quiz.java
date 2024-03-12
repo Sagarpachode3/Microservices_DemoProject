@@ -1,5 +1,7 @@
 package com.quiz.entities;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,4 +22,6 @@ public class Quiz {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String title;
+	
+	transient private List<Question> questions;
 }
