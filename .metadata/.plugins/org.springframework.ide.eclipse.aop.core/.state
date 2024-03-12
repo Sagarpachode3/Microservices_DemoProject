@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
+<aop-project name="ServiceRegistry"/>
+<aop-project name="ApiGateway"/>
 <aop-project name="QuizService"/>
 <aop-project name="QuestionService"/>
 </aop-reference-model>
